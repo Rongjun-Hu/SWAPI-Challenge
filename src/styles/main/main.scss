@@ -1,2 +1,11 @@
-@import '../utility/reset';
-@import '../home/home.scss';
+// Global
+@import "../global/reset";
+
+@import "../home/home.scss";
+
+// utility
+@import "../utility/flex";
+
+// componetns
+@import "../components/film";
+@import "../components/search";

@@ -1,0 +1,20 @@
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  cursor: pointer;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.flex-justify-sb {
+  justify-content: space-between;
+}
+
+.flex-justify-fs {
+  justify-content: flex-start;
+}
