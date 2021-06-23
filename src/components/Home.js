@@ -20,6 +20,8 @@ const Home = () => {
       setFilms(data.results);
     }
 
+    console.log(data.results);
+
     // Display all the films by defalt
     setFilms(data.results);
   };
@@ -42,8 +44,6 @@ const Home = () => {
 
   const addFavouriteFilm = (film) => {
     const newFavouriteFilm = [...favourites, film];
-
-    if (newFavouriteFilm.includes(film.episode_id)) return;
     setFavourites(newFavouriteFilm);
     saveToLocalStorage(newFavouriteFilm);
   };
@@ -73,7 +73,7 @@ const Home = () => {
       </div>
       <div className="flex-row">
         {/* Displat a list of Films */}
-        <FilmList films={films} />
+        <FilmList films={films} favouriteClick={addFavouriteFilm} />
       </div>
     </div>
   );
