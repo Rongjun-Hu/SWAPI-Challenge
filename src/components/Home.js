@@ -33,9 +33,8 @@ const Home = () => {
   }, [searchValue]);
 
   useEffect(() => {
-    const favouritesFilm = JSON.parse(
-      localStorage.getItem("favourites-sw-films") || []
-    );
+    const json = localStorage.getItem("favourites-sw-films");
+    const favouritesFilm = JSON.parse(json) || [];
 
     setFavourites(favouritesFilm);
   }, []);
