@@ -34,7 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     const favouritesFilm = JSON.parse(
-      localStorage.getItem("favourites-sw-films")
+      localStorage.getItem("favourites-sw-films") || []
     );
 
     setFavourites(favouritesFilm);
