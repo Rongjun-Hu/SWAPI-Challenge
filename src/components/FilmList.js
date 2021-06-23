@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const FilmList = ({ films, favouriteClick, favoriteComponent }) => {
-  const FavouriteComponent = favoriteComponent;
-
+const FilmList = ({ films, favouriteClick, favouriteComponent }) => {
+  const Favourite = favouriteComponent;
   return (
     <>
       {films.map((film, filmIndex) => (
@@ -15,16 +13,16 @@ const FilmList = ({ films, favouriteClick, favoriteComponent }) => {
                 <p>{film.release_date}</p>
 
                 <div className="film-buttons">
-                  <button className="film-buttons-details">
+                  <div className="film-buttons-details">
                     <Link to={`/films/` + (filmIndex + 1)}>Details</Link>
-                  </button>
+                  </div>
 
-                  <button
+                  <div
                     className="film-buttons-favourite"
                     onClick={() => favouriteClick(film)}
                   >
-                    Favourite
-                  </button>
+                    <Favourite />
+                  </div>
                 </div>
               </div>
               <div className="film-intro">

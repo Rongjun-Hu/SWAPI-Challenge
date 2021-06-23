@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import FilmList from "./FilmList";
 import FilmListHeader from "./FilmListHeader";
 import SearchFilm from "./SearchFilm";
+import AddFavourite from "./AddFavourite";
+import RemoveFavourite from "./RemoveFavourite";
 
 const Home = () => {
   const [films, setFilms] = useState([]);
@@ -63,7 +65,11 @@ const Home = () => {
       </div>
       <div className="flex-row">
         {/* Displat a list of favourites Films */}
-        <FilmList films={favourites} favouriteClick={removeFavouriteFilm} />
+        <FilmList
+          films={favourites}
+          favouriteClick={removeFavouriteFilm}
+          favouriteComponent={RemoveFavourite}
+        />
       </div>
       <div className="border"></div>
       <div className="flex-row flex-justify-sb">
@@ -73,7 +79,11 @@ const Home = () => {
       </div>
       <div className="flex-row">
         {/* Displat a list of Films */}
-        <FilmList films={films} favouriteClick={addFavouriteFilm} />
+        <FilmList
+          films={films}
+          favouriteClick={addFavouriteFilm}
+          favouriteComponent={AddFavourite}
+        />
       </div>
     </div>
   );
