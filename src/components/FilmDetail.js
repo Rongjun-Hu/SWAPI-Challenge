@@ -31,7 +31,7 @@ const FilmDetail = () => {
   useEffect(() => {
     getFilmDetail(id);
     // getCharacters();
-  }, []);
+  }, [id]);
 
   return (
     <div className="film-detail">
